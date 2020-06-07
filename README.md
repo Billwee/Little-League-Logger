@@ -1,10 +1,10 @@
-# Little League Logger
+# Little League Logger (LLL)
 
 Visit application by [Clicking Here](https://littleleaguelogger.herokuapp.com/)
 
 View powerpoint presentation by [Clicking Here](https://docs.google.com/presentation/d/1hqtFRbs4SnInxHDeL7d3FcaWem7aLsqV5c5Ljsn6YG4/edit#slide=id.g73824109db_2_23)
 
-An MVP based application for a baseball team. This application keeps all team members and their family members up-to-date on upcoming, current, and past games.
+An MVP based application for Little League baseball teams. LLL keeps team members and their family members up-to-date on upcoming, current, and past games.
 
 ## Technology Used
 
