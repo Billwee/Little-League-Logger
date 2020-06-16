@@ -10,7 +10,11 @@ Visit application by [Clicking Here](https://littleleaguelogger.herokuapp.com/)
 
 View powerpoint presentation by [Clicking Here](https://docs.google.com/presentation/d/1hqtFRbs4SnInxHDeL7d3FcaWem7aLsqV5c5Ljsn6YG4/edit#slide=id.g73824109db_2_23)
 
-## Application Use
+## Application Walkthrough
+
+
+
+## Application Information
 
 Developed for two users: Coach and User
 
