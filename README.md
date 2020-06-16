@@ -1,21 +1,14 @@
 # Little League Logger (LLL)
 
+## Overview
+
+An Node.js/Express based application for Little League baseball teams. LLL keeps team members and their family members up-to-date on upcoming, current, and past games. With live score updating and scrolling gmae highlights.
+
+## Deployment
+
 Visit application by [Clicking Here](https://littleleaguelogger.herokuapp.com/)
 
 View powerpoint presentation by [Clicking Here](https://docs.google.com/presentation/d/1hqtFRbs4SnInxHDeL7d3FcaWem7aLsqV5c5Ljsn6YG4/edit#slide=id.g73824109db_2_23)
-
-An MVP based application for Little League baseball teams. LLL keeps team members and their family members up-to-date on upcoming, current, and past games.
-
-## Technology Used
-
-- Javascript
-- Node.js
-  - Express
-  - Express-Sessions
-  - bcrypt
-- HTML
-- CSS
-- Bootstrap
 
 ## Application Use
 
@@ -46,3 +39,15 @@ Developed for two users: Coach and User
   - Change the game status from in-progress to game over or vice versa.
     - Will display "Game Over" on the page along with the winning team once changes to game over.
   - Coach can use Fix Game button to re-access the update fields for a later date
+  
+  
+## Technology Used
+
+- Javascript
+- Node.js
+  - Express
+  - Express-Sessions
+  - bcrypt
+- HTML
+- CSS
+- Bootstrap
