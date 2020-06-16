@@ -12,7 +12,21 @@ View powerpoint presentation by [Clicking Here](https://docs.google.com/presenta
 
 ## Application Walkthrough
 
+### Navigating to the page will first bring the user to the login page if they hasn't already logged in recently. If they have the application will automatically redirect them to their calander page.
 
+![Login](./public/img/walk1.PNG)
+
+### Clicking 'Create Account' will pull up an account creation module. Coach accounts get special privleges and need a special password to obtain them.
+
+![Create Account](./public/img/walk2.PNG)
+
+### After logging in the user will be presented with a calander showing color coordinated game dates and today's date. Users can click on completed and in-progress games to view their stats. Coaches have hte option to add or delete games.
+
+![Calander](./public/img/walk3.PNG)
+
+### After clicking on a game the user will be presented with a scoreboard displaying it's score and scrolling stats. Only coaches have the option to adjust game scores. Users can see these updates in real time.
+
+![Game Stats](./public/img/walk4.PNG)
 
 ## Application Information
 
