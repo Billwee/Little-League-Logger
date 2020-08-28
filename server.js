@@ -1,6 +1,7 @@
 var express = require("express");
 var session = require("express-session");
 var bcrypt = require("bcrypt");
+var moment = require("moment");
 
 // Sets up the Express App
 var app = express();

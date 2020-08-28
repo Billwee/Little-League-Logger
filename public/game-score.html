@@ -20,26 +20,20 @@
   <!--User 1 view of game statistics-->
   <div class="container main-section">
 
-    <div class="container">
+    <div class="container mb-5">
+      <!-- If game is over. This is displayed at top of scoreboard -->
       <div class="row">
         <div class="col-md-12" id="endGame" style="display: none"></div>
       </div>
-      <div class="row">
-        <div class="col-md-12 info" id="date"></div>
-      </div>
-      <div class="row">
+      <!-- Game Date and Home Team -->
+      <div class="row px-3 text-center">
+        <div class="col-md-6 info" id="date"></div>
         <div class="col-md-6 info" id="h_name">Home Team:</div>
-        <div class="col-md-6 info" id="loc">Location:</div>
-      </div>
+      </div>    
 
-      <div class="row">
-          <div class="col-md-6 info" id="v_name">Visiting Team:</div>
-          <div class="col-md-6 info" id="address">Address:</div>
-      </div>
-
-        <div class = "container">
-          <div class="row">
-            <div class="col-md-2"></div>
+        <div id='scoreGrid' class = "container">
+          <div class="row inningsRow">
+            <div class="col-md-1"></div>
             <div class="col-md-1 inning">1</div>
             <div class="col-md-1 inning">2</div>
             <div class="col-md-1 inning">3</div>
@@ -48,38 +42,39 @@
             <div class="col-md-1 inning">6</div>
             <div class="col-md-1 inning OT" style="display: none">OT</div>
             <div class="col-md-1 inning">RUNS</div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-2 team home">HOME</div>
-          <div class="col-md-1 score" id="h1_score"></div>
-          <div class="col-md-1 score" id="h2_score"></div>
-          <div class="col-md-1 score" id="h3_score"></div>
-          <div class="col-md-1 score" id="h4_score"></div>
-          <div class="col-md-1 score" id="h5_score"></div>
-          <div class="col-md-1 score" id="h6_score"></div>
-          <div class="col-md-1 score OT" id="h_overtime" style="display: none"></div>
-          <div class="col-md-1 runs" id="h_runs"></div>
-        </div>
-          
-        <div class="row">
-          <div class="col-md-2 team visit">VISTING</div>
-          <div class="col-md-1 score" id="v1_score"></div>
-          <div class="col-md-1 score" id="v2_score"></div>
-          <div class="col-md-1 score" id="v3_score"></div>
-          <div class="col-md-1 score" id="v4_score"></div>
-          <div class="col-md-1 score" id="v5_score"></div>
-          <div class="col-md-1 score" id="v6_score"></div>
-          <div class="col-md-1 score OT" id="v_overtime" style="display: none"></div>
-          <div class="col-md-1 runs" id="v_runs"></div>
-        </div>
-        
+            <div class="col-md-1"></div>
+          </div>
+          <div class="row scoreRow">
+            <div class="col-md-1 team home">HOME</div>
+            <div class="col-md-1 score" id="h1_score"></div>
+            <div class="col-md-1 score" id="h2_score"></div>
+            <div class="col-md-1 score" id="h3_score"></div>
+            <div class="col-md-1 score" id="h4_score"></div>
+            <div class="col-md-1 score" id="h5_score"></div>
+            <div class="col-md-1 score" id="h6_score"></div>
+            <div class="col-md-1 score OT" id="h_overtime" style="display: none"></div>
+            <div class="col-md-1 runs" id="h_runs"></div>
+            <div class="col-md-1"></div>
+          </div>          
+          <div class="row scoreRow">
+            <div class="col-md-1 team visit">VISTING</div>
+            <div class="col-md-1 score" id="v1_score"></div>
+            <div class="col-md-1 score" id="v2_score"></div>
+            <div class="col-md-1 score" id="v3_score"></div>
+            <div class="col-md-1 score" id="v4_score"></div>
+            <div class="col-md-1 score" id="v5_score"></div>
+            <div class="col-md-1 score" id="v6_score"></div>
+            <div class="col-md-1 score OT" id="v_overtime" style="display: none"></div>
+            <div class="col-md-1 runs" id="v_runs"></div>
+            <div class="col-md-1"></div>
+          </div>        
         </div>
       </div>
 
 
+<!-- Comments section being reworked -->
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-sm-8 offset-sm-2">
         <div class="d-flex justify-content-center">
           <div id="outer" class="row"></div>
@@ -87,7 +82,6 @@
       </div>
     </div>
     <div class="row">
-
       <div class="offset-md-1 col-md-3">
         <div id="commentName" class="d-flex justify-content-center"><label for="fname">Email: </label>
           <input type="text" id="getName" name="fname"></div>
@@ -107,7 +101,7 @@
     <div class="row">      
       <div class="col-6-md"><button type="submit" class="btn btn-success submit" id="calendar">&larr; Calendar</button></div>        
     </div>
-  </div>
+  </div> -->
 
 </body>
 </html>

@@ -55,9 +55,4 @@ module.exports = function (app) {
       res.send(true);
     });
   });
-
-  //Catches everything else and redirects to login
-  // app.get("*", function (req, res) {
-  //   res.redirect("/");
-  // });
 };

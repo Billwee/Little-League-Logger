@@ -3,44 +3,51 @@
 }
 
 .main-section {
-  background-color: blue;
-  border: 1px solid black;
-  border-radius: 8px;
+  background-color: #086248;
+  border: 5px double #fff;
+  border-radius: 5px;
   padding: 10px;
   margin-top: 5px;
 }
 
 .main-sectionC {
-  background-color: #5040ff;
-  border: 2px groove #0e009f;
+  background-color: #086248;
+  border: 5px double #fff;
   border-radius: 8px;
   padding: 10px;
   margin-top: 5px;
 }
 
-.inning {
-  color: white;
-  text-align: center;
-  margin-top: 5px;
+#scoreGrid {
+  margin-top: 20px;
+}
+
+.inningsRow {
+  justify-content: center;
+}
+
+.scoreRow {
+  justify-content: center;
 }
 
 .inning {
+  font-size: 1.2rem;
   text-shadow: 1px 1px 3px black;
-  color: white;
+  color: #fff;
   text-align: center;
   margin-top: 5px;
 }
 
 .score {
-  background-color: red;
-  border: 2px solid blue;
-  padding: 4px;
+  background-color: #086248;
+  border: 5px double #fff;
   text-align: center;
+  color: #fff;
 }
 
 .scoreC {
-  background-color: red;
-  border: 2px solid #5040ff;
+  background-color: #086248;
+  border: 5px double #fff;
   padding: 4px;
   text-align: center;
   box-shadow: -1px 1px 3px black;
@@ -48,40 +55,38 @@
 
 .runs,
 .runsC {
-  background-color: red;
-  border: 1px solid white;
-  padding: 4px;
-  margin: 1px;
+  color: #fff;
+  background-color: #086248;
+  border: 5px double #fff;
   text-align: center;
 }
 
+.update-score {
+  width: 80%;
+}
+
 .ticker {
-  border: 2px solid white;
+  border: 2px solid #fff;
   background-color: lightblue;
   margin-top: 10px;
 }
 
 .info {
-  color: white;
+  color: #fff;
   text-shadow: 1px 1px 3px black;
-}
-
-.team {
-  text-align: right;
-  color: white;
 }
 
 .team {
   text-shadow: 1px 1px 3px black;
   text-align: right;
-  color: white;
+  color: #fff;
 }
 
 #message {
 }
 
 .comments {
-  color: white;
+  color: #fff;
   display: block;
   float: left;
 }
@@ -113,7 +118,7 @@ span.comments {
 
 #commentName,
 #commentComment {
-  color: white;
+  color: #fff;
 }
 
 #coachUpdates {
@@ -132,11 +137,13 @@ span.comments {
 
 #endGame {
   text-shadow: 1px 1px 3px black;
-  color: white;
+  color: #fff;
+  border: 1px #fff solid;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  margin-top: 5px;
+  /* margin-bottom: 5px; */
+  padding-bottom: 8px;
 }
 
 #alert {

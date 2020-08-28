@@ -17,6 +17,29 @@ html {
   user-select: none;
 }
 
+/* Welcome Header */
+#welcomeDiv {
+  margin-top: 10px;
+}
+
+#logout {
+  /* margin-top: 20px; */
+  width: 80px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#welcome {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 5px;
+}
+
+#userLogged {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 8px;
+}
+
+/* Calander Section */
 .calendar,
 section {
   max-width: 75rem;
@@ -92,25 +115,6 @@ h4 {
   color: #ee3a43;
 }
 
-#logout {
-  /* margin-top: 20px; */
-  width: 80px;
-  border-radius: 5px;
-}
-#welcome {
-  margin: 0 5px;
-}
-#userLogged {
-  margin: 0 8px;
-}
-
-/* section {
-  display: none;
-}
-#welcomeDiv {
-  display: none;
-} */
-
 h1#year {
   font-size: 2em;
   height: 29px;
@@ -170,12 +174,6 @@ section {
   align-items: center;
   justify-content: center;
 }
-
-/*for a Spanish like calendar  
-  .month .day:nth-of-type(1){order:7!important;}
-  .month .day:nth-of-type(8){order:-1!important;}
-   
-*/
 
 script {
   display: none;

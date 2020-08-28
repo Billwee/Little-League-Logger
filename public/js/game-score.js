@@ -14,7 +14,9 @@ $(document).ready(function () {
   function scoreInfo() {
     $.get("/api/scores/", function (data) {
       var gameData = data[gamID];
-      $("#date").text("Date: " + gameData.date);
+      var dateArr = gameData.date.split("-");
+      var newDate = [dateArr[1], dateArr[2], dateArr[0]];
+      $("#date").text("Date: " + newDate.join("/"));
       $("#h1_score").text(gameData.h1_score);
       $("#v1_score").text(gameData.v1_score);
       $("#h2_score").text(gameData.h2_score);
@@ -93,7 +95,7 @@ $(document).ready(function () {
         wins = gameData.away_team;
       }
 
-      $("#endGame").text("Final Score: Winner is " + wins + "!");
+      $("#endGame").text(`Game Over: ${wins} Win`);
     });
   }
 
@@ -206,114 +208,117 @@ $(document).ready(function () {
 /////////////////////////////////////////////////
 ///COMMENTS CODE/////////////////////////////////
 /////////////////////////////////////////////////
-function getComments() {
-  $.ajax({ url: "/api/comments/", method: "GET" }).then(function (commentData) {
-    var results = commentData;
-    $("#outer").empty();
 
-    var lists = $("<div>");
-    lists.addClass("tick");
-    lists.attr("id", "tick");
+//Comments section is being reworked
 
-    $.each(results, function (index) {
-      var getDiv = $("#outer");
+// function getComments() {
+//   $.ajax({ url: "/api/comments/", method: "GET" }).then(function (commentData) {
+//     var results = commentData;
+//     $("#outer").empty();
 
-      var p = $("<span>").text(results[index].comment);
-      var pp = $("<span>").text("  . . . from " + results[index].name);
-      var ppp = $("<span>").text(" . . . " + results[index].date);
-      p.append(pp);
-      p.append(ppp);
-      p.addClass("comments");
+//     var lists = $("<div>");
+//     lists.addClass("tick");
+//     lists.attr("id", "tick");
 
-      lists.append(p);
+//     $.each(results, function (index) {
+//       var getDiv = $("#outer");
 
-      getDiv.append(lists);
-    });
-  });
-}
-getComments();
+//       var p = $("<span>").text(results[index].comment);
+//       var pp = $("<span>").text("  . . . from " + results[index].name);
+//       var ppp = $("<span>").text(" . . . " + results[index].date);
+//       p.append(pp);
+//       p.append(ppp);
+//       p.addClass("comments");
 
-$("#tick2").html($("#tick").html());
+//       lists.append(p);
 
-var temp = 0,
-  intervalId = 0;
-$("#tick li").each(function () {
-  var offset = $(this).offset();
-  var offsetLeft = offset.left;
-  $(this).css({ left: offsetLeft + temp });
-  temp = $(this).width() + temp + 10;
-});
-$("#tick").css({ width: temp + 40, "margin-left": "20px" });
-temp = 1000;
+//       getDiv.append(lists);
+//     });
+//   });
+// }
+// getComments();
 
-function abc(a, b) {
-  var marginLefta = parseInt($("#" + a).css("marginLeft"));
-  var marginLeftb = parseInt($("#" + b).css("marginLeft"));
-  if (
-    -marginLefta <= $("#" + a).width() &&
-    -marginLefta <= $("#" + a).width()
-  ) {
-    $("#" + a).css({ "margin-left": marginLefta - 1 + "px" });
-  } else {
-    $("#" + a).css({ "margin-left": temp });
-  }
-  if (-marginLeftb <= $("#" + b).width()) {
-    $("#" + b).css({ "margin-left": marginLeftb - 1 + "px" });
-  } else {
-    $("#" + b).css({ "margin-left": temp });
-  }
-}
+// $("#tick2").html($("#tick").html());
 
-function start() {
-  intervalId = window.setInterval(function () {
-    abc("tick", "tick2");
-  }, 10);
-}
+// var temp = 0,
+//   intervalId = 0;
+// $("#tick li").each(function () {
+//   var offset = $(this).offset();
+//   var offsetLeft = offset.left;
+//   $(this).css({ left: offsetLeft + temp });
+//   temp = $(this).width() + temp + 10;
+// });
+// $("#tick").css({ width: temp + 40, "margin-left": "20px" });
+// temp = 1000;
 
-$(function () {
-  $("#outer").mouseenter(function () {
-    window.clearInterval(intervalId);
-  });
-  $("#outer").mouseleave(function () {
-    start();
-  });
-  start();
-});
+// function abc(a, b) {
+//   var marginLefta = parseInt($("#" + a).css("marginLeft"));
+//   var marginLeftb = parseInt($("#" + b).css("marginLeft"));
+//   if (
+//     -marginLefta <= $("#" + a).width() &&
+//     -marginLefta <= $("#" + a).width()
+//   ) {
+//     $("#" + a).css({ "margin-left": marginLefta - 1 + "px" });
+//   } else {
+//     $("#" + a).css({ "margin-left": temp });
+//   }
+//   if (-marginLeftb <= $("#" + b).width()) {
+//     $("#" + b).css({ "margin-left": marginLeftb - 1 + "px" });
+//   } else {
+//     $("#" + b).css({ "margin-left": temp });
+//   }
+// }
 
-$("#support").on("click", function (event) {
-  event.preventDefault();
-  var getName = $("#getName").val().trim();
-  var newMessage = $("#message").val().trim();
+// function start() {
+//   intervalId = window.setInterval(function () {
+//     abc("tick", "tick2");
+//   }, 10);
+// }
 
-  $.ajax({
-    method: "GET",
-    url: "/api/users/" + getName,
-  }).then(function (match) {
-    if (match) {
-      var team = match.team;
-      var emaill = match.name;
-      console.log("team " + team);
-      console.log("email " + emaill);
+// $(function () {
+//   $("#outer").mouseenter(function () {
+//     window.clearInterval(intervalId);
+//   });
+//   $("#outer").mouseleave(function () {
+//     start();
+//   });
+//   start();
+// });
 
-      function insertMessage() {
-        var newEntry = {
-          comment: newMessage,
-          date: "2020-04-09",
-          team: team,
-          name: emaill,
-        };
-        console.log("newENtry " + newEntry);
+// $("#support").on("click", function (event) {
+//   event.preventDefault();
+//   var getName = $("#getName").val().trim();
+//   var newMessage = $("#message").val().trim();
 
-        $.post("/api/newComment", newEntry).then(function () {
-          alert("new comment was created!");
-        });
-      }
-      insertMessage();
+//   $.ajax({
+//     method: "GET",
+//     url: "/api/users/" + getName,
+//   }).then(function (match) {
+//     if (match) {
+//       var team = match.team;
+//       var emaill = match.name;
+//       console.log("team " + team);
+//       console.log("email " + emaill);
 
-      console.log(match);
-      console.log(team);
-    } else {
-      alert("You must be a registered user to add comments");
-    }
-  });
-});
+//       function insertMessage() {
+//         var newEntry = {
+//           comment: newMessage,
+//           date: "2020-04-09",
+//           team: team,
+//           name: emaill,
+//         };
+//         console.log("newENtry " + newEntry);
+
+//         $.post("/api/newComment", newEntry).then(function () {
+//           alert("new comment was created!");
+//         });
+//       }
+//       insertMessage();
+
+//       console.log(match);
+//       console.log(team);
+//     } else {
+//       alert("You must be a registered user to add comments");
+//     }
+//   });
+// });

@@ -8,15 +8,15 @@ CREATE TABLE users
 (
         id int NOT NULL
         AUTO_INCREMENT,
-name varchar
+        name varchar
         (100) NOT NULL,
-password varchar
+        password varchar
         (100) NOT NULL,
-coach TINYINT
+        coach TINYINT
         (1) NOT NULL,
-team varchar
+        team varchar
         (100) NOT NULL,
-PRIMARY KEY
+        PRIMARY KEY
         (id)
 );
 
@@ -25,19 +25,19 @@ PRIMARY KEY
         (
                 game_id int NOT NULL
                 AUTO_INCREMENT,
-                completed TINYINT
+        completed TINYINT
                 (1) NOT NULL,
         in_progress TINYINT
                 (1) NOT NULL,
-location varchar
+        location varchar
                 (100) NOT NULL,
-date DATE
-NOT NULL,
-home_team varchar
+        date DATE
+                NOT NULL,
+        home_team varchar
                 (100) NOT NULL,
-away_team varchar
+        away_team varchar
                 (100) NOT NULL,
-PRIMARY KEY
+        PRIMARY KEY
                 (game_id)
 );
 
@@ -46,56 +46,53 @@ PRIMARY KEY
                 (
                         game_id int
                         AUTO_INCREMENT NOT NULL,
-
-date DATE
-NOT NULL,
-
-h1_score INT
+        date DATE
+                NOT NULL,
+        h1_score INT
                         (2),
-v1_score INT
+        v1_score INT
                         (2),
-h2_score INT
+        h2_score INT
                         (2),
-v2_score INT
+        v2_score INT
                         (2),
-h3_score INT
+        h3_score INT
                         (2),
-v3_score INT
+        v3_score INT
                         (2),
-h4_score INT
+        h4_score INT
                         (2),
-v4_score INT
+        v4_score INT
                         (2),
-h5_score INT
+        h5_score INT
                         (2),
-v5_score INT
+        v5_score INT
                         (2),
-h6_score INT
+        h6_score INT
                         (2),
-v6_score INT
+        v6_score INT
                         (2),
-h_overtime INT
+        h_overtime INT
                         (2),
-v_overtime INT
+        v_overtime INT
                         (2),
-PRIMARY KEY
+        PRIMARY KEY
                         (game_id)
 );
 
 
-CREATE TABLE comments
-(
-        comment_id int NOT NULL
-        AUTO_INCREMENT,
-
-comment varchar
-        (500) NOT NULL,
-date DATE
-NOT NULL,
-team varchar
-        (100) NOT NULL,
-name varchar
-        (100) NOT NULL,
-PRIMARY KEY
-        (comment_id)
+                        CREATE TABLE comments
+                        (
+                                comment_id int NOT NULL
+                                AUTO_INCREMENT,
+        comment varchar
+                                (500) NOT NULL,
+        date DATE
+                NOT NULL,
+        team varchar
+                                (100) NOT NULL,
+        name varchar
+                                (100) NOT NULL,
+        PRIMARY KEY
+                                (comment_id)
 );
